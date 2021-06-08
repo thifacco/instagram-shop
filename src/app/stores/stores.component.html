@@ -1,0 +1,9 @@
+<section id="stores" class="stores mt-3">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 store" *ngFor="let store of [{profile:'stunningone', followers:'326'}, {profile:'stunningtwo', followers:'2.3K'}]">
+            <app-card-store [store]="store"></app-card-store>
+         </div>
+      </div>
+   </div>
+</section>

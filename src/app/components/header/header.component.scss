@@ -1,0 +1,104 @@
+.navbar {
+  padding-top: unset;
+  padding-bottom: unset;
+
+  .navbar-brand {
+    font-weight: 600;
+  }
+
+  .navbar-toggler {
+    border: unset;
+  }
+
+  img {
+    height: 21px;
+  }
+}
+
+.search {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+
+  .input-group-search>input,
+  .input-group-text,
+  .input-group-text>button {
+    background-color: #f8f9fa;
+    border: unset;
+  }
+
+  .input-group-search {
+    input {
+      color: #212529;
+
+      &::placeholder {
+        color: #bdbdbd;
+      }
+    }
+  }
+
+  .btn-cancel {
+    display: none;
+    opacity: 0;
+    font-size: 12px;
+    color: #212529;
+    text-decoration: none;
+    transition: opacity 1s ease;
+
+    &.show {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  &.stick-top {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #bdbdbd;
+  }
+}
+
+.sections {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  .container {
+    overflow-y: auto;
+  }
+
+  .nav {
+    width: max-content;
+    margin-bottom: .75rem;
+
+    .nav-link {
+      font-size: 12px;
+      color: #212529;
+      border: 1px solid #bdbdbd;
+      padding: 0.25rem 1.5rem;
+      margin-right: .5rem;
+
+      &.active {
+
+        background-color: unset;
+      }
+    }
+  }
+}
+
+.results {
+  display: none;
+  opacity: 0;
+  height: 100vh;
+  margin-top: 0.5rem;
+  transition: opacity 1s ease;
+
+  &.show {
+    display: block;
+    opacity: 1;
+  }
+
+  .query {
+    border-bottom: 1px solid #bdbdbd;
+  }
+
+  .stores {}
+}

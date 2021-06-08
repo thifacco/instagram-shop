@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "instagram-store": {
+    "instagram-shop": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/instagram-store",
+            "outputPath": "dist/instagram-shop",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,9 +28,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -66,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "instagram-store:build"
+            "browserTarget": "instagram-shop:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "instagram-store:build:production"
+              "browserTarget": "instagram-shop:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "instagram-store:build"
+            "browserTarget": "instagram-shop:build"
           }
         },
         "test": {
@@ -114,15 +117,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "instagram-store:serve"
+            "devServerTarget": "instagram-shop:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "instagram-store:serve:production"
+              "devServerTarget": "instagram-shop:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "instagram-store"
+  "defaultProject": "instagram-shop"
 }

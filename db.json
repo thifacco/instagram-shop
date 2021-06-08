@@ -1,0 +1,51 @@
+{
+   "stores": [
+      {
+         "id": "fragranciawine4",
+         "thumb": "assets/stores/fragranciawine4.jpeg",
+         "name": "Fragrância & Wine",
+         "bio": "1.336 seguidores",
+         "products": [
+            {
+               "id": "f12dab04-b412-11eb-8529-0242ac130003",
+               "images": [
+                  "assets/products/f12dab04-b412-11eb-8529-0242ac130003__1.jpeg"
+               ],
+               "title": "Ferrari Black 125ml",
+               "description": "eau de toilette 125ml",
+               "price": "206",
+               "store_id": "fragranciawine4"
+            }
+         ]
+      }
+   ],
+   "selections": [
+      {
+         "store_id": "fragranciawine4",
+         "title": "Men's pack: Perfum Care",
+         "description": "The ultimate men's package fragrance",
+         "image": "",
+         "products": [
+            {
+               "store": "fragranciawine4",
+               "product_id": "f12dab04-b412-11eb-8529-0242ac130003"
+            }
+         ]
+      }
+   ],
+   "collections": [
+      {
+         "store_id": "fragranciawine4",
+         "title": "Perfumes para o Dia dos Namorados",
+         "image": "",
+         "products_id": [
+            {
+               "store": "fragranciawine4",
+               "product_id": "f12dab04-b412-11eb-8529-0242ac130003"
+            }
+         ]
+      }
+   ],
+   "guides": [],
+   "videos": []
+}

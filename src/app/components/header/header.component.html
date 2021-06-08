@@ -1,0 +1,106 @@
+<nav class="navbar navbar-light" #navbarContainer>
+   <div class="container">
+      <a class="navbar-brand" href="#">Loja</a>
+      <div class="navbar-right">
+         <a [routerLink]="['/shop/wishlist']">
+            <img src="assets/icons/icon-wishlist.svg">
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarText">
+         <span class="navbar-text">
+            Sua conta
+         </span>
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+               <a class="nav-link" aria-current="page" href="#">Atividade de compras</a>
+            </li>
+         </ul>
+         <span class="navbar-text">
+            Loja do Instagram
+         </span>
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+               <a class="nav-link" [routerLink]="['/shop/stores']">Lojas</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Seleções do editor</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Coleções</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Vídeos</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Guias</a>
+            </li>
+         </ul>
+      </div>
+
+      <!-- Navbar páginas internas -->
+      <!-- <a class="navbar-brand" [routerLink]="['/home']">
+         <img src="assets/icons/icon-arrow.svg">
+      </a>
+      <h5>Lojas</h5>
+      <a class="navbar-brand" [routerLink]="['/']">
+         <img src="assets/icons/icon-wishlist.svg">
+      </a> -->
+   </div>
+</nav>
+
+<section class="search" #searchContainer>
+   <div class="container">
+      <div class="input-group input-group-search">
+         <span class="input-group-text" id="app-search">
+            <img class="search-icon" src="assets/icons/icon-search.svg" alt="">
+         </span>
+         <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="app-search"
+            (focus)="searchActivate()" #searchInput>
+         <span class="input-group-text">
+            <button type="button" class="close" aria-label="Limpar" (click)="searchClear()">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </span>
+         <button class="btn btn-link btn-cancel" (click)="searchDeactivate()" #searchCancel>Cancelar</button>
+      </div>
+   </div>
+</section>
+
+<section class="results" #resultsContainer>
+   <div class="query">
+      <div class="container">
+         <app-card-query></app-card-query>
+      </div>
+   </div>
+   <div class="stores">
+      <div class="container">
+
+      </div>
+   </div>
+</section>
+
+<section class="sections" #sectionsContainer>
+   <div class="container">
+      <ul class="nav nav-pills">
+         <li class="nav-item">
+            <a [routerLink]="['/shop/stores']" class="nav-link active">Lojas</a>
+         </li>
+         <li class="nav-item">
+            <a [routerLink]="['/shop/editor-selections']" class="nav-link">Seleções do editor</a>
+         </li>
+         <li class="nav-item">
+            <a [routerLink]="['/shop/collections']" class="nav-link">Coleções</a>
+         </li>
+         <li class="nav-item">
+            <a [routerLink]="['/shop/guides']" class="nav-link">Guias</a>
+         </li>
+         <li class="nav-item">
+            <a [routerLink]="['/shop/videos']" class="nav-link">Vídeos</a>
+         </li>
+      </ul>
+   </div>
+</section>

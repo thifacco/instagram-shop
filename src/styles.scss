@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar-toggler:focus {
+   box-shadow: unset;
+}
+
+.form-control {
+   &:focus {
+      border: unset;
+      box-shadow: unset;
+   }
+}
+
