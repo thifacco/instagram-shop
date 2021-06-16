@@ -5,11 +5,13 @@ export class Product {
       this.title = '';
       this.description = '';
       this.price = '';
+      this.storeId = '';
    }
    
    id: string;
    image: string;
    title: string;
    description: string;
-   price: string
+   price: string;
+   storeId: string;
 }

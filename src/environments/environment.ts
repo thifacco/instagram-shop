@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   baseApi: 'http://localhost:3000',
-  baseImages: ''
+  baseImages: 'https://instagramshop.s3.amazonaws.com'
 };
 
 /*

@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class StoreService {
+export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<any> {
-    return this.http.get(`${environment.baseApi}/stores`);
+  getByStoreId(storeId: string): Observable<any> {
+    return this.http.get(`${environment.baseApi}/stores/${storeId}/products`);
   }
 
   get(id: string): Observable<any> {
