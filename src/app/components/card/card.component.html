@@ -2,7 +2,7 @@
    <a [routerLink]="['/store', product.id]">
       <img [src]="product.image" class="card-img-top" alt="...">
       <div class="card-body">
-         <h5 class="card-title">{{product.title}}</h5>
+         <h5 class="card-title">{{product.title | uppercase}}</h5>
          <span class="card-price">{{product.price | currency: 'BRL'}}</span>
       </div>
    </a>

@@ -3,7 +3,10 @@
       <a class="navbar-brand" [routerLink]="['/stores']" *ngIf="!isStore">Loja</a>
       <a class="navbar-brand" [routerLink]="['/stores']" *ngIf="isStore">
          <img src="assets/icons/icon-arrow.svg" alt="Voltar">
-         {{storeName}}
+         <span class="store-info">
+            <img [src]="storeThumb">
+            {{storeName}}
+         </span>
       </a>
       <div class="navbar-right">
          <a [routerLink]="['/wishlist']">

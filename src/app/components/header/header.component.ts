@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from 'src/app/models/store.model';
 import { ProductService } from 'src/app/services/product.service';
 import { StoreService } from 'src/app/services/store.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -19,6 +20,7 @@ export class HeaderComponent implements OnInit {
 
   isStore: boolean = false;
   storeName: string;
+  storeThumb: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,9 +29,12 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     if (typeof this.route.snapshot.params['id'] !== 'undefined') {
-      this.isStore = true;
       this.storeService.get(this.route.snapshot.params['id']).subscribe(
-        res => this.storeName = res.id
+        res => {
+          this.storeName = res.id;
+          this.storeThumb = environment.baseImages + '/' + res.thumb;
+          this.isStore = true;
+        }
       );
     }
   }
