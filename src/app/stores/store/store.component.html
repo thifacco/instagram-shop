@@ -2,6 +2,10 @@
 
 <section id="store" class="store mt-3">
    <div class="container">
-      <p>store works!</p>
+      <div class="row">
+         <div class="col-6" *ngFor="let product of products">
+            <app-card [product]="product"></app-card>
+         </div>
+      </div>
    </div>
 </section>

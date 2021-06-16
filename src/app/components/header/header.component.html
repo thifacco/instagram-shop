@@ -1,6 +1,10 @@
 <nav class="navbar navbar-light" #navbarContainer>
    <div class="container">
-      <a class="navbar-brand" href="#">Loja</a>
+      <a class="navbar-brand" [routerLink]="['/stores']" *ngIf="!isStore">Loja</a>
+      <a class="navbar-brand" [routerLink]="['/stores']" *ngIf="isStore">
+         <img src="assets/icons/icon-arrow.svg" alt="Voltar">
+         {{storeName}}
+      </a>
       <div class="navbar-right">
          <a [routerLink]="['/wishlist']">
             <img src="assets/icons/icon-wishlist.svg">
@@ -28,15 +32,6 @@
             </li>
          </ul>
       </div>
-
-      <!-- Navbar páginas internas -->
-      <!-- <a class="navbar-brand" [routerLink]="['/home']">
-         <img src="assets/icons/icon-arrow.svg">
-      </a>
-      <h5>Lojas</h5>
-      <a class="navbar-brand" [routerLink]="['/']">
-         <img src="assets/icons/icon-wishlist.svg">
-      </a> -->
    </div>
 </nav>
 
@@ -68,15 +63,5 @@
       <div class="container">
 
       </div>
-   </div>
-</section>
-
-<section class="sections" #sectionsContainer>
-   <div class="container">
-      <ul class="nav nav-pills">
-         <li class="nav-item">
-            <a [routerLink]="['/stores']" class="nav-link active">Lojas</a>
-         </li>
-      </ul>
    </div>
 </section>

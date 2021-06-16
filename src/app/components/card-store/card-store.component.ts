@@ -19,12 +19,10 @@ export class CardStoreComponent implements OnInit {
   ngOnInit(): void {
     this.store.thumb = environment.baseImages + '/' + this.store.thumb;
 
-    this.productService.getByStoreId(this.store.id).subscribe(
-      (res) => {
-        this.products = res.slice(0, 3);
-        this.products.map(p => p.image = environment.baseImages + '/' + p.image);
-      }
-    );
+    this.productService.getByStoreId(this.store.id).subscribe(res => {
+      this.products = res.slice(0, 3);
+      this.products.map(p => p.image = environment.baseImages + '/' + p.image);
+    });
   }
 
 }
