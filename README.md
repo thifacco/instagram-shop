@@ -22,7 +22,5 @@ json-server db.json
 npm start
 ```
 
-5. Abra a página no navegador
-
-URL: http://localhost:4200/
+5. Abra a página no navegador: http://localhost:4200/
 
