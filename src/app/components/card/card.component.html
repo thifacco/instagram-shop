@@ -1,6 +1,10 @@
 <div class="card">
    <a [routerLink]="['/store', product.id]">
-      <img [src]="product.image" class="card-img-top" alt="...">
+      <div class="card-img">
+         <div class="ratio">
+            <img [src]="product.image" class="img-fluid" [alt]="product.title">
+         </div>
+      </div>
    </a>
    <div class="card-body">
       <h5 class="card-title">{{product.title}}</h5>
