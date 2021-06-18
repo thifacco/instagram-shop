@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ProductComponent } from './product/product.component';
 import { StoreComponent } from './stores/store/store.component';
 import { StoresComponent } from './stores/stores.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
@@ -14,6 +15,11 @@ const routes: Routes = [
   {
     path: 'store/:id', component: StoreComponent, data: {
       title: 'Loja | Instagram Shop'
+    }
+  },
+  {
+    path: 'product/:productId', component: ProductComponent, data: {
+      title: 'Produto | Instagram Shop'
     }
   },
   {

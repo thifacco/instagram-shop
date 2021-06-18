@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { CardQueryComponent } from './components/card-query/card-query.component';
 import { CardStoreComponent } from './components/card-store/card-store.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     CardSearchComponent,
     WishlistComponent,
     CardQueryComponent,
-    CardStoreComponent
+    CardStoreComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,6 @@ export class ProductService {
   }
 
   get(id: string): Observable<any> {
-    return this.http.get(`${environment.baseApi}/stores/${id}`);
+    return this.http.get(`${environment.baseApi}/products/${id}`);
   }
 }
