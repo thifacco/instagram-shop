@@ -39,7 +39,7 @@
    </div>
 </nav>
 
-<section class="search" #searchContainer>
+<section class="search" *ngIf="!isProduct" #searchContainer>
    <div class="container">
       <div class="input-group input-group-search">
          <span class="input-group-text" id="app-search">

@@ -12,6 +12,7 @@ import { StoreService } from '../services/store.service';
 export class ProductComponent implements OnInit {
 
   product: Product;
+  relatedProducts: Product;
   store: Store;
 
   constructor(
@@ -23,12 +24,20 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     if (typeof this.route.snapshot.params['productId'] !== 'undefined') {
       this.productService.get(this.route.snapshot.params['productId']).subscribe(
-        res => {
-          this.product = res;
+        async res => {
+          this.product = await res;
           
           this.storeService.get(this.product.storeId).subscribe(
-            resStore => this.store = resStore
+            async resStore => {
+              this.store = await resStore;
+
+              this.productService.getRelatedProductsByStoreId(this.store.id).subscribe(
+                async resRelatedProducts => this.relatedProducts = await resRelatedProducts
+              );
+            }
           );
+
+          
         }
       );
     }

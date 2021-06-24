@@ -18,6 +18,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
 import { ImgPathPipe } from './pipes/img-path.pipe';
 import { BtnSaveComponent } from './components/btn-save/btn-save.component';
+import { ProfileLinkComponent } from './components/profile-link/profile-link.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BtnSaveComponent } from './components/btn-save/btn-save.component';
     ProfileComponent,
     ProfileInfoComponent,
     ImgPathPipe,
-    BtnSaveComponent
+    BtnSaveComponent,
+    ProfileLinkComponent
   ],
   imports: [
     BrowserModule,

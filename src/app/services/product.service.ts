@@ -18,7 +18,7 @@ export class ProductService {
     return this.http.get(`${environment.baseApi}/products/${id}`);
   }
 
-  getRelatedProductsByStoreId(storeId: string, title: string): Observable<any> {
-    return this.http.get(`${environment.baseApi}/stores/${storeId}/products?_page=1&_limit=4&title_like=${title}&_order=asc&id_ne=${storeId}`);
+  getRelatedProductsByStoreId(storeId: string): Observable<any> {
+    return this.http.get(`${environment.baseApi}/stores/${storeId}/products?_page=1&_limit=4&_order=asc&id_ne=${storeId}`);
   }
 }

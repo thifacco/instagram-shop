@@ -1,0 +1,43 @@
+.profile-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+  color: unset;
+  text-decoration: unset;
+
+  .thumb {
+    img {
+      width: 48px;
+      border-radius: 50%;
+    }
+  }
+
+  .info {
+    width: 100% !important;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    h3 {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 0;
+      line-height: 16px;
+    }
+
+    span {
+      font-size: 10px;
+      line-height: 12px;
+      color: #aaa;
+    }
+  }
+
+  .img-arrow {
+    height: 21px;
+    transform: rotate(180deg);
+  }
+}
