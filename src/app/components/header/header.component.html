@@ -42,13 +42,13 @@
 <section class="search" *ngIf="!isProduct" #searchContainer>
    <div class="container">
       <div class="input-group input-group-search">
-         <span class="input-group-text" id="app-search">
+         <span class="input-group-text bg-light" id="app-search">
             <img class="search-icon" src="assets/icons/icon-search.svg" alt="">
          </span>
-         <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="app-search"
+         <input type="text" class="form-control bg-light" placeholder="Buscar" aria-label="Buscar" aria-describedby="app-search"
             (focus)="searchActivate()" #searchInput>
-         <span class="input-group-text">
-            <button type="button" class="close" aria-label="Limpar" (click)="searchClear()">
+         <span class="input-group-text bg-light">
+            <button type="button" class="close bg-light" aria-label="Limpar" (click)="searchClear()">
                <span aria-hidden="true">&times;</span>
             </button>
          </span>
