@@ -20,6 +20,10 @@
      align-items: flex-start;
      justify-content: center;
 
+     &.no-permalink {
+       width: 100% !important;
+     }
+
      h3 {
        font-size: 14px;
        font-weight: bold;

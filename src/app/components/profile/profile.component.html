@@ -2,7 +2,7 @@
    <div class="thumb">
       <img [src]="store.thumb | imgPath" class="card-img-top" [alt]="store.name">
    </div>
-   <div class="info">
+   <div class="info" [ngClass]="{'no-permalink': !showPermalink}">
       <h3>{{ store.id }}</h3>
       <span>{{ store.bio }}</span>
    </div>

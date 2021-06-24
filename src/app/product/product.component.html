@@ -19,13 +19,15 @@
          <div class="about">
             <h5>Sobre essa loja</h5>
             <app-profile [store]="store" [showPermalink]="false"></app-profile>
-            <a class="btn btn-outline-light btn-store" [routerLink]="['/store', store?.id]">Ver loja</a>
+            <div class="d-grid gap-2">
+               <a class="btn btn-outline-light btn-store" [routerLink]="['/store', store?.id]">Ver loja</a>
+            </div>
          </div>
       </div>
       <div class="related-products">
          <h5>Mais desta loja</h5>
          <div class="list">
-            
+            <!-- listar relacionados aqui -->
          </div>
       </div>
    </div>
