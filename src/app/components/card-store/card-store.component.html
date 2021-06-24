@@ -1,20 +1,11 @@
 <div class="store">
-   <div class="profile">
-      <div class="thumb">
-         <img [src]="store.thumb" class="card-img-top" [alt]="store.name">
-      </div>
-      <div class="info">
-         <h3>{{ store.id }}</h3>
-         <span>{{ store.bio }}</span>
-      </div>
-      <a [routerLink]="['/store', store.id]">Ver loja</a>
-   </div>
+   <app-profile [store]="store"></app-profile>
    <div class="featured">
       <div class="row g-0">
          <div class="col-12">
-            <!-- <ng-template ngFor let-product [ngForOf]="products"> -->
-            <img [src]="product.image" class="card-img-top" [alt]="product.name" *ngFor="let product of products">
-         <!-- </ng-template> -->
+            <a [routerLink]="['/store', store.id]">
+               <img [src]="product.image | imgPath" class="card-img-top" [alt]="product.name" *ngFor="let product of products">
+            </a>
          </div>
       </div>
    </div>

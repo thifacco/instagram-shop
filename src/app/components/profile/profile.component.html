@@ -1,0 +1,10 @@
+<div class="profile">
+   <div class="thumb">
+      <img [src]="store.thumb | imgPath" class="card-img-top" [alt]="store.name">
+   </div>
+   <div class="info">
+      <h3>{{ store.id }}</h3>
+      <span>{{ store.bio }}</span>
+   </div>
+   <a [routerLink]="['/store', store.id]">Ver loja</a>
+</div>

@@ -4,7 +4,6 @@ import { Product } from 'src/app/models/product.model';
 import { Store } from 'src/app/models/store.model';
 import { ProductService } from 'src/app/services/product.service';
 import { StoreService } from 'src/app/services/store.service';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -20,8 +19,6 @@ export class HeaderComponent implements OnInit {
   @ViewChild('searchCancel') searchCancel: ElementRef;
 
   isStore: boolean = false;
-  storeName: string;
-  storeThumb: string;
   store: Store;
   isProduct: boolean;
   product: Product;
@@ -32,13 +29,11 @@ export class HeaderComponent implements OnInit {
     private productService: ProductService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     if (typeof this.route.snapshot.params['id'] !== 'undefined') {
       this.storeService.get(this.route.snapshot.params['id']).subscribe(
-        res => {
-          this.store = res;
-          this.storeName = this.store.id;
-          this.storeThumb = environment.baseImages + '/' + this.store.thumb;
+        async res => {
+          this.store = await res;
           this.isStore = true;
           this.isProduct = false;
         }
@@ -46,14 +41,13 @@ export class HeaderComponent implements OnInit {
     }
     else if (typeof this.route.snapshot.params['productId'] !== 'undefined') {
       this.productService.get(this.route.snapshot.params['productId']).subscribe(
-        res => {
-          this.product = res;
+        async res => {
+          this.product = await res;
           this.isProduct = true;
 
           this.storeService.get(this.product.storeId).subscribe(
-            resStore => {
-              this.storeName = resStore.id;
-              this.storeThumb = environment.baseImages + '/' + resStore.thumb;
+            async resStore => {
+              this.store = await resStore;
               this.isStore = false;    
             }
           );

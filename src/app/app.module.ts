@@ -14,6 +14,9 @@ import { CardQueryComponent } from './components/card-query/card-query.component
 import { CardStoreComponent } from './components/card-store/card-store.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
+import { ImgPathPipe } from './pipes/img-path.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ProductComponent } from './product/product.component';
     WishlistComponent,
     CardQueryComponent,
     CardStoreComponent,
-    ProductComponent
+    ProductComponent,
+    ProfileComponent,
+    ProfileInfoComponent,
+    ImgPathPipe
   ],
   imports: [
     BrowserModule,

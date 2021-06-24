@@ -4,8 +4,6 @@ import { Product } from 'src/app/models/product.model';
 import { Store } from 'src/app/models/store.model';
 import { ProductService } from 'src/app/services/product.service';
 import { StoreService } from 'src/app/services/store.service';
-import { environment } from 'src/environments/environment';
-
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',

@@ -2,12 +2,12 @@
    <a [routerLink]="['/product', product.id]">
       <div class="card-img">
          <div class="ratio">
-            <img [src]="product.image" class="img-fluid" [alt]="product.title">
+            <img [src]="product.image | imgPath" class="img-fluid" [alt]="product.title">
          </div>
       </div>
    </a>
    <div class="card-body">
-      <h5 class="card-title">{{product.title}}</h5>
-      <span class="card-price">{{product.price | currency:'BRL':'symbol-narrow':'1.0'}}</span>
+      <h5 class="card-title">{{ product.title | titlecase }}</h5>
+      <span class="card-price">{{ product.price | currency:'BRL':'symbol-narrow':'1.0' }}</span>
    </div>
 </div>
