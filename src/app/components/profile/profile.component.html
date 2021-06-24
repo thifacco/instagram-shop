@@ -6,5 +6,5 @@
       <h3>{{ store.id }}</h3>
       <span>{{ store.bio }}</span>
    </div>
-   <a [routerLink]="['/store', store.id]">Ver loja</a>
+   <a [routerLink]="['/store', store.id]" *ngIf="showPermalink">Ver loja</a>
 </div>

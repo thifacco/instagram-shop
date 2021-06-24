@@ -9,6 +9,7 @@ import { Store } from 'src/app/models/store.model';
 export class ProfileComponent implements OnInit {
 
   @Input() store: Store;
+  @Input() showPermalink: boolean = true;
 
   constructor() { }
 

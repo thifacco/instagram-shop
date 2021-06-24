@@ -2,22 +2,25 @@
 
 <section id="product" class="product mt-3">
    <div class="container">
-      <div class="thumb">
+      <div class="image">
          <img [src]="product?.image | imgPath" class="img-fluid">
       </div>
       <div class="info">
-         <!-- profile aqui -->
-         <p class="title">{{ product?.title | titlecase }}</p>
+         <div class="profile">
+            <app-profile-info [store]="store"></app-profile-info>
+            <app-btn-save></app-btn-save>
+         </div>
+         <h3>{{ product?.title | titlecase }}</h3>
          <p class="price">{{ product?.price | currency:'BRL':'symbol-narrow':'1.0' }}</p>
       </div>
       <div class="description">
          <h5>Descrição</h5>
          <p>{{ product?.description | titlecase }}</p>
-      </div>
-      <div class="about">
-         <h5>Sobre essa loja</h5>
-         <!-- profile aqui -->
-         <a [routerLink]="['/store', store?.id]">Ver loja</a>
+         <div class="about">
+            <h5>Sobre essa loja</h5>
+            <app-profile [store]="store" [showPermalink]="false"></app-profile>
+            <a class="btn btn-outline-light btn-store" [routerLink]="['/store', store?.id]">Ver loja</a>
+         </div>
       </div>
       <div class="related-products">
          <h5>Mais desta loja</h5>
