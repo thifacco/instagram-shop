@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-card-query',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-query.component.scss']
 })
 export class CardQueryComponent implements OnInit {
+
+  @Input() query: string;
 
   constructor() { }
 

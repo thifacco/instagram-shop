@@ -22,7 +22,7 @@ export class ProductService {
     return this.http.get(`${environment.baseApi}/stores/${storeId}/products?_page=1&_limit=4&_order=asc&id_ne=${storeId}`);
   }
 
-  search(query: string): Observable<any> {
-    return this.http.get(`${environment.baseApi}/products?title_like=${query}`);
+  searchByStoreId(storeId: string, query: string): Observable<any> {
+    return this.http.get(`${environment.baseApi}/stores/${storeId}/products?title_like=${query}`);
   }
 }
