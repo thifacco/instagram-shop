@@ -5,6 +5,7 @@ import { Store } from 'src/app/models/store.model';
 import { ProductService } from 'src/app/services/product.service';
 import { StoreService } from 'src/app/services/store.service';
 import { Search } from 'src/app/models/search.model';
+
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
@@ -43,6 +44,7 @@ export class StoreComponent implements OnInit {
   }
 
   searchClear() {
+    this.querySearch.search = '';
     this.searchInput.nativeElement.value = '';
     this.searchInput.nativeElement.focus();
   }
@@ -61,6 +63,12 @@ export class StoreComponent implements OnInit {
 
   searchExec() {
     console.log(this.querySearch);
+    this.productService.searchByStoreId(this.querySearch).subscribe(
+      res => {
+        console.log(res);
+        this.products = res;
+      }
+    );
   }
 
 }

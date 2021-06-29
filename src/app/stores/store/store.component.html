@@ -8,8 +8,9 @@
          <span class="input-group-text bg-light" id="app-search">
             <img class="search-icon" src="assets/icons/icon-search.svg" alt="">
          </span>
-         <input type="text" class="form-control bg-light" placeholder="Pesquisar nesta loja" aria-label="Pesquisar" aria-describedby="app-search"
-            (click)="searchActivate()" (keyup)="searchExec()" [(ngModel)]="querySearch.search" #searchInput>
+         <input type="text" class="form-control bg-light" placeholder="Pesquisar nesta loja" aria-label="Pesquisar"
+            aria-describedby="app-search" (click)="searchActivate()" (keyup)="searchExec()"
+            [(ngModel)]="querySearch.search" #searchInput>
          <span class="input-group-text bg-light">
             <button type="button" class="close bg-light" aria-label="Limpar" (click)="searchClear()">
                <span aria-hidden="true">&times;</span>
