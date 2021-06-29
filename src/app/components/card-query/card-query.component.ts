@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Search } from 'src/app/models/search.model';
 
 @Component({
   selector: 'app-card-query',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardQueryComponent implements OnInit {
 
-  @Input() query: string;
+  @Input() query: Search;
 
   constructor() { }
 

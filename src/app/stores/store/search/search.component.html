@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<section id="search" class="search mt-3">
+   <div class="container">
+      <div class="row">
+         <div class="col-6" *ngFor="let product of productsFound">
+            <app-card [product]="product"></app-card>
+         </div>
+      </div>
+   </div>
+</section>

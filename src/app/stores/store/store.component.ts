@@ -20,7 +20,7 @@ export class StoreComponent implements OnInit {
   @ViewChild('searchCancel') searchCancel: ElementRef;
 
   public store: Store;
-  public products: Product;
+  public products: Product[];
   public querySearch: Search = new Search();
 
   constructor(
@@ -62,12 +62,8 @@ export class StoreComponent implements OnInit {
   }
 
   searchExec() {
-    console.log(this.querySearch);
     this.productService.searchByStoreId(this.querySearch).subscribe(
-      res => {
-        console.log(res);
-        this.products = res;
-      }
+      res => this.products = res
     );
   }
 

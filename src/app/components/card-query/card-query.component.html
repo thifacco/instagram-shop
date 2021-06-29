@@ -2,5 +2,7 @@
    <div class="thumb">
       <img src="assets/icons/icon-search.svg" alt="">
    </div>
-   <span>{{ query }}</span>
+   <a [routerLink]="['/store', query.storeId, 'search', query.search]">
+      {{ query.search }}
+   </a>
 </div>
