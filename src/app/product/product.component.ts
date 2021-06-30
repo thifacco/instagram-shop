@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HeaderComponent } from '../components/header/header.component';
 import { Product } from '../models/product.model';
 import { Store } from '../models/store.model';
 import { ProductService } from '../services/product.service';
@@ -10,6 +11,8 @@ import { StoreService } from '../services/store.service';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
+
+  @ViewChild('headerContainer') headerContainer: HeaderComponent;
 
   product: Product;
   relatedProducts: Product;
@@ -30,6 +33,8 @@ export class ProductComponent implements OnInit {
           this.storeService.get(this.product.storeId).subscribe(
             async resStore => {
               this.store = await resStore;
+              this.headerContainer.store = await resStore;
+              this.headerContainer.isProduct = true;
 
               this.productService.getRelatedProductsByStoreId(this.store.id).subscribe(
                 async resRelatedProducts => this.relatedProducts = await resRelatedProducts
