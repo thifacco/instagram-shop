@@ -29,11 +29,31 @@
     padding: .5rem .25rem;
 
     .card-title {
-      font-size: 12px;
-      line-height: 14px;
-      font-weight: 400;
-      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
       margin-bottom: 0;
+
+      h5 {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        width: calc(100% - 19.55px);
+        height: 14px;
+        overflow: hidden;
+      }
+
+      .btn {
+        padding: unset;
+        line-height: 14px;
+
+        img {
+          width: 17px;
+        }
+      }
     }
 
     .card-price {

@@ -14,13 +14,8 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
 })
 export class StoreComponent implements OnInit {
 
-  // @ViewChild('headerContainer') headerContainer: ElementRef;
-  // @ViewChild('searchContainer') searchContainer: ElementRef;
-  // @ViewChild('resultsContainer') resultsContainer: ElementRef;
-  // @ViewChild('searchInput') searchInput: ElementRef;
-  // @ViewChild('searchCancel') searchCancel: ElementRef;
-
   @ViewChild('headerContainer') headerContainer: HeaderComponent;
+  @ViewChild('searchInput') searchInput: ElementRef;
 
   public store: Store;
   public products: Product[];
@@ -36,42 +31,38 @@ export class StoreComponent implements OnInit {
     if (typeof this.route.snapshot.params['id'] !== 'undefined') {
       this.querySearch.storeId = this.route.snapshot.params['id'];
 
-      this.storeService.get(this.route.snapshot.params['id']).subscribe(
-        res => {
-          this.store = res;
-          this.headerContainer.store = this.store;
-          this.headerContainer.isStore = true;
-        }
-      );
-
-      this.productService.getByStoreId(this.route.snapshot.params['id']).subscribe(
-        res => this.products = res
-      );
+      this.getStore();
+      this.getAllProducts();
     }
   }
 
-  searchClear() {
-    // this.querySearch.search = '';
-    // this.searchInput.nativeElement.value = '';
-    // this.searchInput.nativeElement.focus();
+  getStore(): void {
+    this.storeService.get(this.querySearch.storeId).subscribe(
+      res => {
+        this.store = res;
+        this.headerContainer.store = this.store;
+        this.headerContainer.isStore = true;
+      }
+    );
   }
 
-  searchActivate() {
-    // this.headerContainer.nativeElement.style.display = 'none';
-    // this.resultsContainer.nativeElement.classList.add('show');
-    // this.searchCancel.nativeElement.classList.add('show');
+  getAllProducts(): void {
+    this.productService.getByStoreId(this.querySearch.storeId).subscribe(
+      res => this.products = res
+    );
   }
 
-  searchDeactivate() {
-    // this.headerContainer.nativeElement.style.display = 'block';
-    // this.resultsContainer.nativeElement.classList.remove('show');
-    // this.searchCancel.nativeElement.classList.remove('show');
+  searchClear(): void {
+    this.querySearch.search = '';
+    this.searchInput.nativeElement.value = '';
+    this.searchInput.nativeElement.focus();
+    this.getAllProducts();
   }
 
-  searchExec() {
-    // this.productService.searchByStoreId(this.querySearch).subscribe(
-    //   res => this.products = res
-    // );
+  searchExec(): void {
+    this.productService.searchByStoreId(this.querySearch).subscribe(
+      res => this.products = res
+    );
   }
 
 }

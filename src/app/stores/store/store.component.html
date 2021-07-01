@@ -7,22 +7,13 @@
             <img class="search-icon" src="assets/icons/icon-search.svg" alt="">
          </span>
          <input type="text" class="form-control bg-light" placeholder="Pesquisar nesta loja" aria-label="Pesquisar"
-            aria-describedby="app-search" (click)="searchActivate()" (keyup)="searchExec()"
+            aria-describedby="app-search" (keyup)="searchExec()"
             [(ngModel)]="querySearch.search" #searchInput>
-         <span class="input-group-text bg-light">
+         <span class="input-group-text bg-light" *ngIf="querySearch.search?.length">
             <button type="button" class="close bg-light" aria-label="Limpar" (click)="searchClear()">
                <span aria-hidden="true">&times;</span>
             </button>
          </span>
-         <button class="btn btn-link btn-cancel" (click)="searchDeactivate()" #searchCancel>Cancelar</button>
-      </div>
-   </div>
-</section>
-
-<section class="results" #resultsContainer>
-   <div class="query">
-      <div class="container">
-         <app-card-query [query]="querySearch"></app-card-query>
       </div>
    </div>
 </section>
