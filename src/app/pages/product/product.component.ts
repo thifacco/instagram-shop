@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HeaderComponent } from '../../components/header/header.component';
-import { Product } from '../../models/product.model';
-import { Store } from '../../models/store.model';
-import { ProductService } from '../../services/product.service';
-import { StoreService } from '../../services/store.service';
+import { HeaderComponent } from 'src/app/components/header/header.component';
+import { Product } from 'src/app/models/product.model';
+import { Store } from 'src/app/models/store.model';
+import { ProductService } from 'src/app/services/product.service';
+import { StoreService } from 'src/app/services/store.service';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
