@@ -9,9 +9,7 @@
    <div class="card-body">
       <div class="card-title">
          <h5 class="">{{ product.title | titlecase }}</h5>
-         <button class="btn btn-link">
-            <img src="assets/icons/icon-wishlist.svg">
-         </button>
+         <button class="btn btn-link"><i class="bi bi-bookmark"></i></button>
       </div>
       <div class="card-price">{{ product.price | currency:'BRL':'symbol-narrow':'1.0' }}</div>
    </div>

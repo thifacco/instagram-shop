@@ -50,8 +50,12 @@
         padding: unset;
         line-height: 14px;
 
-        img {
-          width: 17px;
+        &:focus {
+          box-shadow: unset;
+        }
+
+        &.btn-link {
+          color: unset;
         }
       }
     }

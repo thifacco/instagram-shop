@@ -6,8 +6,14 @@
     font-weight: 600;
   }
 
-  .navbar-toggler {
-    border: unset;
+  .navbar-right {
+    a {
+      color: unset;
+    }
+
+    .navbar-toggler {
+      border: unset;
+    }
   }
 
   img {
