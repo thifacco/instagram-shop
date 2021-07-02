@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from 'src/app/services/store.service';
-import { Store } from '../models/store.model';
+import { Store } from '../../models/store.model';
 
 @Component({
   selector: 'app-stores',

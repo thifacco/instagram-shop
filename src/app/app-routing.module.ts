@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ConfigComponent } from './config/config.component';
-import { ProductComponent } from './product/product.component';
-import { StoreComponent } from './stores/store/store.component';
-import { StoresComponent } from './stores/stores.component';
-import { WishlistComponent } from './wishlist/wishlist.component';
+import { ConfigComponent } from './pages/config/config.component';
+import { ProductComponent } from './pages/product/product.component';
+import { StoreComponent } from './pages/stores/store/store.component';
+import { StoresComponent } from './pages/stores/stores.component';
+import { WishlistComponent } from './pages/wishlist/wishlist.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'stores', pathMatch: 'full' },
