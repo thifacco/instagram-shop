@@ -44,6 +44,17 @@
     p {
       margin-bottom: 0;
     }
+
+    .btn-outline-light {
+      color: #6c757d;
+      border-color: #6c757d;
+
+      &:hover {
+        color: #fff;
+        background-color: #6c757d;
+        border-color: inherit;
+      }
+    }
   }
 
   .related-products {

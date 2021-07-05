@@ -1,8 +1,12 @@
 .btn-save {
-  padding: 0;
-  margin: 0;
+  padding: unset;
+  line-height: 14px;
 
-  img {
-    height: 21px;
+  &:focus {
+    box-shadow: unset;
+  }
+
+  &.btn-link {
+    color: unset;
   }
 }

@@ -45,19 +45,6 @@
         height: 14px;
         overflow: hidden;
       }
-
-      .btn {
-        padding: unset;
-        line-height: 14px;
-
-        &:focus {
-          box-shadow: unset;
-        }
-
-        &.btn-link {
-          color: unset;
-        }
-      }
     }
 
     .card-price {
