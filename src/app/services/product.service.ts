@@ -8,7 +8,7 @@ import { Search } from '../models/search.model';
 })
 export class ProductService {
 
-  static emitProductSave = new EventEmitter<string[]>();
+  wishlist: string[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -26,5 +26,15 @@ export class ProductService {
 
   searchByStoreId(querySearch: Search): Observable<any> {
     return this.http.get(`${environment.baseApi}/stores/${querySearch.storeId}/products?title_like=${querySearch.search}`);
+  }
+
+  addWishlist(id: string) {
+    this.wishlist.push(id);
+    localStorage.setItem('wishlist', JSON.stringify(this.wishlist));
+  }
+
+  getWishlist() {
+    const wishlistStorage: string = localStorage.getItem('wishlist');
+    return JSON.parse(wishlistStorage);
   }
 }

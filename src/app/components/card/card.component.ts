@@ -9,23 +9,12 @@ import { ProductService } from 'src/app/services/product.service';
 export class CardComponent implements OnInit {
 
   @Input() product: Product;
-  public productsSaved: string[] = [];
 
   constructor() { }
 
-  ngOnInit(): void {
-    ProductService.emitProductSave.subscribe(
-      res => {
-        this.productsSaved = res;
-        console.log('products saved', this.productsSaved);
-      }
-    );
-
-  }
+  ngOnInit(): void { }
 
   saveProduct(id: string) {
-    this.productsSaved.push(id);
-    ProductService.emitProductSave.emit(this.productsSaved);
   }
 
 }

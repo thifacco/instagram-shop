@@ -41,11 +41,12 @@ export class ProductComponent implements OnInit {
               );
             }
           );
-
-          
         }
       );
     }
   }
 
+  addToWishlist(productId: string) {
+    this.productService.addWishlist(productId);
+  }
 }

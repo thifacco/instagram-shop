@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product.model';
+import { LocalstorageService } from 'src/app/services/localstorage.service';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-wishlist',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishlistComponent implements OnInit {
 
-  constructor() { }
+  public productsWishlist: object[] = [];
+
+  constructor(
+    private localstorageService: LocalstorageService,
+    private productService: ProductService
+  ) { }
 
   ngOnInit(): void {
+    this.getProductsWishlist();
   }
 
+  getProductsWishlist() {
+    const items: string[] = this.localstorageService.get('wishlist');
+    items.map(productId => {
+      this.productService.get(productId).subscribe(res => this.productsWishlist.push(res))
+    });
+  }
 }

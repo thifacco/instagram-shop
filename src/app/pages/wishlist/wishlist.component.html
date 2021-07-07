@@ -2,6 +2,10 @@
 
 <section id="wishlist" class="wishlist mt-3">
    <div class="container">
-      <p>wishlist works!</p>
+      <div class="row">
+         <div class="col-6" *ngFor="let product of productsWishlist">
+            <app-card [product]="product"></app-card>
+         </div>
+      </div>
    </div>
 </section>

@@ -8,7 +8,7 @@
       <div class="info">
          <div class="profile">
             <app-profile-info [store]="store"></app-profile-info>
-            <app-btn-save></app-btn-save>
+            <app-btn-save [productId]="product?.id"></app-btn-save>
          </div>
          <h3>{{ product?.title | titlecase }}</h3>
          <p class="price">{{ product?.price | currency:'BRL':'symbol-narrow':'1.0' }}</p>
