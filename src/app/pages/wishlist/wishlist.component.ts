@@ -17,8 +17,8 @@ export class WishlistComponent implements OnInit {
     private productService: ProductService
   ) { }
 
-  ngOnInit(): void {
-    this.getProductsWishlist();
+  async ngOnInit() {
+    await this.getProductsWishlist();
   }
 
   getProductsWishlist() {

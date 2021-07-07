@@ -10,17 +10,24 @@ export class BtnSaveComponent implements OnInit {
 
   @Input() productId: string;
 
+  public onWishlist: boolean = false;
+
   constructor(private localstorageService: LocalstorageService) { }
 
-  ngOnInit(): void {
-    // verificar se o produto está na wishlist
+  ngOnInit() {
+    this.checkOnWishlist(); 
+  }
+
+  checkOnWishlist() {
+    this.onWishlist = this.localstorageService.check('wishlist', this.productId);
+    console.log(this.onWishlist);
   }
 
   saveToWishlist() {
-    
-    // não adicionar se já existir
-
     this.localstorageService.add('wishlist', this.productId);
   }
 
+  removeFromWishlist() {
+    this.onWishlist = this.localstorageService.remove('wishlist', this.productId);
+  }
 }

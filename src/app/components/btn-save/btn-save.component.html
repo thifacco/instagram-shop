@@ -1,3 +1,7 @@
-<button class="btn btn-link btn-save" (click)="saveToWishlist()">
+<button class="btn btn-link btn-save" (click)="saveToWishlist()" *ngIf="!onWishlist">
    <i class="bi bi-bookmark"></i>
+</button>
+
+<button class="btn btn-link btn-save" (click)="removeFromWishlist()" *ngIf="onWishlist">
+   <i class="bi bi-bookmark-fill"></i>
 </button>
