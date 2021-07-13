@@ -43,7 +43,7 @@ export class LocalstorageService {
     }
   }
 
-  check(name: string, value: any) {
+  check(name: string, value: any): boolean {
     const pieces: string[] = this.get(name);
     const piece: string = pieces.find(v => v === value);
 

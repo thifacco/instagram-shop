@@ -9,7 +9,7 @@
    <div class="card-body">
       <div class="card-title">
          <h5 class="">{{ product.title | titlecase }}</h5>
-         <app-btn-save [productId]="product.id"></app-btn-save>
+         <app-btn-save [productId]="product.id" (onWishlist)="wishlist($event)"></app-btn-save>
       </div>
       <div class="card-price">{{ product.price | currency:'BRL':'symbol-narrow':'1.0' }}</div>
    </div>
