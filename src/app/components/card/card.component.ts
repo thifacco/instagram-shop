@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product.model';
 import { LocalstorageService } from 'src/app/services/localstorage.service';
 @Component({
@@ -9,16 +10,32 @@ import { LocalstorageService } from 'src/app/services/localstorage.service';
 export class CardComponent implements OnInit {
 
   @Input() product: Product;
+  public isWislistPage: boolean = false;
 
-  constructor(private localstorageService: LocalstorageService) { }
+  constructor(
+    private localstorageService: LocalstorageService,
+    private route: ActivatedRoute
+  ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.checkIsWishlistPage();
+  }
+
+  checkIsWishlistPage(): void {
+    if (this.route.snapshot.routeConfig.path === 'wishlist') {
+      this.isWislistPage = true;
+    }
+  }
 
   wishlist(event: boolean) {
     const isWishlist: boolean = this.localstorageService.check('wishlist', this.product.id);
     
     if (isWishlist) {
       this.localstorageService.remove('wishlist', this.product.id);
+
+      if (this.isWislistPage) {
+        document.getElementById(this.product.id).style.display = 'none';
+      }
     } else {
       this.localstorageService.add('wishlist', this.product.id);
     }
