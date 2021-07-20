@@ -1,16 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 .container {
-   max-width: 575px !important;
+  max-width: 575px !important;
 }
 
 .navbar-toggler:focus {
-   box-shadow: unset;
+  box-shadow: unset;
 }
 
 .form-control {
-   &:focus {
-      border: unset;
-      box-shadow: unset;
-   }
+  &:focus {
+    border: unset;
+    box-shadow: unset;
+  }
 }
-
