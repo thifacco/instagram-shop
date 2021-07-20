@@ -16,7 +16,6 @@ export class BtnSaveComponent implements OnInit {
 
   ngOnInit() {
     this.isWishlist = this.localstorageService.check('wishlist', this.productId);
-    console.log(this.isWishlist);
   }
 
   triggerWishlist(event: boolean) {

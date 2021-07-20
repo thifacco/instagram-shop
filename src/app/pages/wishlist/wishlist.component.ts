@@ -18,13 +18,13 @@ export class WishlistComponent implements OnInit {
     private productService: ProductService
   ) { }
 
-  async ngOnInit() {
-    await this.getProductsWishlist();
+  ngOnInit() {
+    this.getProductsWishlist();
   }
 
-  getProductsWishlist() {
+  async getProductsWishlist() {
     const items: string[] = this.localstorageService.get('wishlist');
-    items.map(productId => {
+    await items.map(productId => {
       this.productService.get(productId).subscribe(res => this.productsWishlist.push(res))
     });
   }
