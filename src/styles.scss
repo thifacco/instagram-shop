@@ -7,6 +7,10 @@ body {
   max-width: 575px !important;
 }
 
+.navbar-toggler {
+  padding: 0.25rem 0 0.25rem 0.75rem !important;
+}
+
 .navbar-toggler:focus {
   box-shadow: unset;
 }
@@ -16,4 +20,8 @@ body {
     border: unset;
     box-shadow: unset;
   }
+}
+
+.card {
+  background-color: transparent !important;
 }
