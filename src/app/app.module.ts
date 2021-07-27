@@ -20,6 +20,8 @@ import { ProfileLinkComponent } from './components/profile-link/profile-link.com
 import { ConfigComponent } from './pages/config/config.component';
 import { ProductComponent } from './pages/product/product.component';
 
+import { UiSwitchModule } from 'ngx-ui-switch';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,10 @@ import { ProductComponent } from './pages/product/product.component';
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    UiSwitchModule.forRoot({
+      size: 'small'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

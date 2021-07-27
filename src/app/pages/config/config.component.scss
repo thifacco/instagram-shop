@@ -1,0 +1,11 @@
+.config {
+  height: calc(100vh - 56px);
+
+  .list {
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
