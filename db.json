@@ -11,6 +11,12 @@
          "thumb": "217951403_118172157190318_2052690443308871986_n.jpeg",
          "name": "Capmaker",
          "bio": "Bonés produzidos no Brasil"
+      },
+      {
+         "id": "rayban",
+         "thumb": "82558287_810139882847158_4964262963247579136_n.jpeg",
+         "name": "Ray-Ban",
+         "bio": "Genuine Since 1937"
       }
    ],
    "products": [
@@ -249,26 +255,82 @@
       {
          "id": "d18a3045-c583-40b6-9dec-6e91a6751ffd",
          "image": "243823933_376204450846850_4716830015265077765_n.webp.jpg",
-         "title": "Capmaker",
-         "description": "Capmaker",
+         "title": "Boné Trucker",
+         "description": "Tá rolando cupom desconto para presentear nesse dia dos pais e claro que você não vai perder né??? Utilize PAI10 e ganhe 10% de desconto!! Corre conferirir * Promoção por tempo limitado.",
          "price": "55",
          "storeId": "capmakerofficial"
       },
       {
          "id": "db38a042-e4c5-487d-a9e6-157c6709f534",
          "image": "224756039_552711529240099_230910724423701704_n.jpeg",
-         "title": "Capmaker",
-         "description": "Capmaker",
-         "price": "125",
+         "title": "Boné Dakas",
+         "description": "Que somos apaixonados por bonés vocês já sabem!! Mas o que a gente gosta mesmo é de ver vocês satisfeitos usando nossos caps mundão afora!!",
+         "price": "129",
          "storeId": "capmakerofficial"
       },
       {
          "id": "7b1de957-54e0-4e2d-8912-594dd8c241b6",
          "image": "217355400_815677265975655_3445784143994038125_n.jpeg",
-         "title": "Capmaker",
-         "description": "Capmaker",
-         "price": "125",
+         "title": "Boné Barcelona",
+         "description": "Quando é sucesso, não pode ficar fora da coleção!! O Boné Barcelona é perfeito para te acompanhar nos dias mais quentes do verão",
+         "price": "129",
          "storeId": "capmakerofficial"
+      },
+      {
+         "id": "8db9a3d5-72ee-42f0-8a8a-e49d793f17d3",
+         "image": "243517002_403231154646095_4353890844276627543_n.webp.jpg",
+         "title": "Boné Berlim",
+         "description": "Atrai olhares por onde passa!",
+         "price": "129",
+         "storeId": "capmakerofficial"
+      },
+      {
+         "id": "8db9a3d5-72ee-42f0-8a8a-e49d793f17d3",
+         "image": "243010556_336340678287911_3066643317539687437_n.jpeg",
+         "title": "Boné Berlim",
+         "description": "Aquele domingo preguiça por aqui, mas sem perder o estilo!",
+         "price": "129",
+         "storeId": "capmakerofficial"
+      },
+      {
+         "id": "2dccb71d-5d72-49b7-ae0d-79c0541699da",
+         "image": "242331431_405266297677923_5628087725247083477_n.jpeg",
+         "title": "Ray-Ban",
+         "description": "Ray-Ban design meets Facebook technology and the Meteor is redefined. Our iconic shape is now available as wearable tech.",
+         "price": "299",
+         "storeId": "rayban"
+      },
+      {
+         "id": "1425b454-9a8e-4304-9dea-d29cb929535a",
+         "image": "218179099_974418956640537_4526905975568729320_n.jpeg",
+         "title": "Ray-Ban",
+         "description": "In State Street and bring good vibes everywhere you go. ​",
+         "price": "299",
+         "storeId": "rayban"
+      },
+      {
+         "id": "93788ac5-add6-45fb-b637-c0460c768da3",
+         "image": "185426943_296609135136440_3393655603047354001_n.jpeg",
+         "title": "Ray-Ban",
+         "description": "Volume up and confidence on. Just needs a beat and she’s straight on the groove.​​",
+         "price": "299",
+         "storeId": "rayban"
+      },
+      {
+         "id": "3e128d1e-26dd-46a1-a627-abce27801961",
+         "image": "134540671_680324685989316_727331087300789821_n.jpeg",
+         "title": "Ray-Ban",
+         "description": "That feeling when you head out with your glasses and find that you're floating on air? You're on.​​​",
+         "price": "299",
+         "storeId": "rayban"
+      },
+      {
+         "id": "c22cd46a-75bc-4880-a5e5-f1483e70eb31",
+         "image": "133426155_429857275001890_5451456380118346740_n.jpeg",
+         "title": "Ray-Ban Justin",
+         "description": "When I wear my glasses, I realize that I am both wearing a lens on the world and a mirror reflecting that same world. This dualism is perhaps the energy that sunglasses carry. I translated this concept by mixing the Ray-Ban universe with my style, as if I had literally soaked the glasses into my digital bucket of liquid paint.​​​",
+         "price": "299",
+         "storeId": "rayban"
       }
    ]
 }
