@@ -5,6 +5,12 @@
          "thumb": "P6cDlqM0.png",
          "name": "Kona Brewing Co",
          "bio": "Brewing Liquid Aloha since '94."
+      },
+      {
+         "id": "capmakerofficial",
+         "thumb": "217951403_118172157190318_2052690443308871986_n.jpeg",
+         "name": "Capmaker",
+         "bio": "Bonés produzidos no Brasil"
       }
    ],
    "products": [
@@ -239,6 +245,30 @@
          "description": "Long neck beer",
          "price": "25",
          "storeId": "konabrewingco"
+      },
+      {
+         "id": "d18a3045-c583-40b6-9dec-6e91a6751ffd",
+         "image": "243823933_376204450846850_4716830015265077765_n.webp.jpg",
+         "title": "Capmaker",
+         "description": "Capmaker",
+         "price": "55",
+         "storeId": "capmakerofficial"
+      },
+      {
+         "id": "db38a042-e4c5-487d-a9e6-157c6709f534",
+         "image": "224756039_552711529240099_230910724423701704_n.jpeg",
+         "title": "Capmaker",
+         "description": "Capmaker",
+         "price": "125",
+         "storeId": "capmakerofficial"
+      },
+      {
+         "id": "7b1de957-54e0-4e2d-8912-594dd8c241b6",
+         "image": "217355400_815677265975655_3445784143994038125_n.jpeg",
+         "title": "Capmaker",
+         "description": "Capmaker",
+         "price": "125",
+         "storeId": "capmakerofficial"
       }
    ]
 }
