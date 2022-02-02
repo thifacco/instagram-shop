@@ -5,7 +5,7 @@ import { Store } from 'src/app/models/store.model';
 import { ProductService } from 'src/app/services/product.service';
 import { StoreService } from 'src/app/services/store.service';
 import { Search } from 'src/app/models/search.model';
-import { HeaderComponent } from 'src/app/components/header/header.component';
+import { HeaderComponent } from 'src/app/shared/header/header.component';
 
 @Component({
   selector: 'app-store',

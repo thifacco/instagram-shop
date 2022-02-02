@@ -13,7 +13,7 @@
          <h3>{{ product?.title | titlecase }}</h3>
          <p class="price">{{ product?.price | currency:'BRL':'symbol-narrow':'1.0' }}</p>
          <div class="d-grid gap-2 mt-3">
-            <a class="btn btn-primary btn-sm" disabled>Ver no site</a>
+            <button class="btn btn-success btn-sm" (click)="addToCart(product?.id)" [disabled]="productAddedToCart">Adicionar ao Carrinho</button>
          </div>
       </div>
       <div class="description">

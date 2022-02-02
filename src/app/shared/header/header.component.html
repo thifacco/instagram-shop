@@ -28,17 +28,20 @@
                <app-profile [store]="store" [showPermalink]="false"></app-profile>
             </div>
             <span class="navbar-text">
-               Loja do Instagram
+               Instagram Shop
             </span>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                <li class="nav-item">
                   <a class="nav-link" [routerLink]="['/stores']">Lojas</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" [routerLink]="['/wishlist']">Lista de desejos</a>
+                  <a class="nav-link" [routerLink]="['/wishlist']">Lista de desejos</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" [routerLink]="['/config']">Configurações</a>
+                  <a class="nav-link" [routerLink]="['/cart']">Carrinho</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/config']">Configurações</a>
                </li>
             </ul>
          </div>

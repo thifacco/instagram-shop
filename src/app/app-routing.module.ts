@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CartComponent } from './pages/cart/cart.component';
 import { ConfigComponent } from './pages/config/config.component';
 import { ProductComponent } from './pages/product/product.component';
 import { StoreComponent } from './pages/stores/store/store.component';
@@ -27,17 +28,21 @@ const routes: Routes = [
     path: 'wishlist', component: WishlistComponent, data: {
       title: 'Lista de desejos | Instagram Shop'
     }
-  }
-  ,
+  },
   {
     path: 'config', component: ConfigComponent, data: {
       title: 'Configurações | Instagram Shop'
+    }
+  },
+  {
+    path: 'cart', component: CartComponent, data: {
+      title: 'Carrinho | Instagram Shop'
     }
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

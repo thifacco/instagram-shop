@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
-import { HeaderComponent } from 'src/app/components/header/header.component';
+import { HeaderComponent } from 'src/app/shared/header/header.component';
 
 @Component({
   selector: 'app-config',

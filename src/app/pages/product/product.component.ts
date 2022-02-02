@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HeaderComponent } from 'src/app/components/header/header.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HeaderComponent } from 'src/app/shared/header/header.component';
 import { Product } from 'src/app/models/product.model';
 import { Store } from 'src/app/models/store.model';
 import { ProductService } from 'src/app/services/product.service';
 import { StoreService } from 'src/app/services/store.service';
+import { LocalstorageService } from 'src/app/services/localstorage.service';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -17,11 +18,14 @@ export class ProductComponent implements OnInit {
   product: Product;
   relatedProducts: Product;
   store: Store;
+  productAddedToCart: boolean;
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private productService: ProductService,
-    private storeService: StoreService
+    private storeService: StoreService,
+    public localstorageService: LocalstorageService
   ) { }
 
   ngOnInit(): void {
@@ -47,6 +51,12 @@ export class ProductComponent implements OnInit {
   }
 
   addToWishlist(productId: string) {
-    this.productService.addWishlist(productId);
+    this.localstorageService.add('wishlist', productId);
+  }
+
+  async addToCart(productId: string) {
+    this.localstorageService.add('cart', productId);
+    this.productAddedToCart = true;
+    this.router.navigate(['/cart']);
   }
 }

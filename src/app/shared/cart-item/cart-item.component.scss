@@ -1,0 +1,24 @@
+.cart-item {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+
+   .thumbnail {
+      width: 48px;
+
+      img {
+         width: 48px;
+         height: 48px;
+      }
+   }
+
+   .title {
+      padding: 5px;
+      text-align: left;
+   }
+
+   .price {
+      width: 50px;
+      padding: 5px;
+   }
+}

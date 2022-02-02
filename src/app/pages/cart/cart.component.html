@@ -1,0 +1,15 @@
+<app-header titleLabel="Carrinho" #headerContainer></app-header>
+
+<section id="cart" class="cart mt-3">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 mt-3" *ngFor="let item of cartItems">
+            <app-cart-item [product]="item"></app-cart-item>
+         </div>
+      </div>
+
+      <div class="cart-actions d-grid gap-2 mt-5">
+         <button class="btn btn-success">Finalizar Compra</button>
+      </div>
+   </div>
+</section>

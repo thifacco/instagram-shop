@@ -9,6 +9,7 @@ import { Search } from '../models/search.model';
 export class ProductService {
 
   wishlist: string[] = [];
+  cart: string[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -36,5 +37,15 @@ export class ProductService {
   getWishlist() {
     const wishlistStorage: string = localStorage.getItem('wishlist');
     return JSON.parse(wishlistStorage);
+  }
+
+  addCart(id: string) {
+    this.cart.push(id);
+    localStorage.setItem('cart', JSON.stringify(this.cart));
+  }
+
+  getCart() {
+    const cartStorage: string = localStorage.getItem('cart');
+    return JSON.parse(cartStorage);
   }
 }
