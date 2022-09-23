@@ -1,0 +1,26 @@
+[
+  {
+    "id": "konabrewingco",
+    "thumb": "08c6cc11-d1bc-4535-963a-1c8d07ee0103.png",
+    "name": "Kona Brewing Co",
+    "bio": "Brewing Liquid Aloha since '94."
+  },
+  {
+    "id": "rayban",
+    "thumb": "82558287_810139882847158_4964262963247579136_n.jpeg",
+    "name": "Ray-Ban",
+    "bio": "Genuine Since 1937"
+  },
+  {
+    "id": "sector9",
+    "thumb": "156837857_483461959476864_1148518214199178491_n.jpeg",
+    "name": "Sector 9 Skateboards",
+    "bio": "We create the highest quality #Skateboard Decks, Completes, Wheels, Trucks, tools & accessories for #skate, #surf and #snow #lifestyle! #s9smashit"
+  },
+  {
+    "id": "capmakerofficial",
+    "thumb": "217951403_118172157190318_2052690443308871986_n.jpeg",
+    "name": "Capmaker",
+    "bio": "Bonés produzidos no Brasil"
+  }
+]

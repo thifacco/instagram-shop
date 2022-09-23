@@ -48,4 +48,8 @@ export class ProductService {
     const cartStorage: string = localStorage.getItem('cart');
     return JSON.parse(cartStorage);
   }
+
+  getStores() {
+    return this.http.get('../assets/data/products.json');
+  }
 }

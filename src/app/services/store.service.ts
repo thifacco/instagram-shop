@@ -17,4 +17,8 @@ export class StoreService {
   get(id: string): Observable<any> {
     return this.http.get(`${environment.baseApi}/stores/${id}`);
   }
+
+  getStores() {
+    return this.http.get('../assets/data/stores.json');
+  }
 }
