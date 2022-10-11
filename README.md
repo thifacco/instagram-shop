@@ -1,5 +1,5 @@
 # Instagram Shop
-Aplicação baseada no app Instagram Shop desenvolvida com Angular 10 e Bootstrap 5
+📷 Clone do Instagram Shop desenvolvido com Angular e Bootstrap
 
 ## Instalação
 1. Clonar esse repositório
