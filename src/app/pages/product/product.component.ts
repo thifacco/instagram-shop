@@ -29,8 +29,10 @@ export class ProductComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    if (typeof this.route.snapshot.params['productId'] !== 'undefined') {
-      this.productService.get(this.route.snapshot.params['productId']).subscribe(
+    const getParamProductId = this.route.snapshot?.params['productId'];
+
+    if (typeof getParamProductId !== 'undefined') {
+      this.productService.get(getParamProductId).subscribe(
         async res => {
           this.product = await res;
           

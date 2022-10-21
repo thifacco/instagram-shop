@@ -1,6 +1,6 @@
 <app-header #headerContainer></app-header>
 
-<section id="product" class="product mt-3">
+<section id="product" class="product mt-3" *ngIf="product; else notFounded">
    <div class="container">
       <div class="image">
          <img [src]="product?.image | imgPath" class="img-fluid">
@@ -42,3 +42,7 @@
       </div>
    </div>
 </section>
+
+<div class="alert alert-warning mt-3" #notFounded>
+   Produto não encontrado.
+</div>
