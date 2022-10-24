@@ -1,6 +1,6 @@
 <app-header titleLabel="Lojas"></app-header>
 
-<section id="stores" class="stores mt-3">
+<section id="stores" class="stores mt-3" *ngIf="stores$ | async as stores; else notFound">
    <div class="container">
       <div class="row">
          <div class="col-12 store" *ngFor="let store of stores">
@@ -9,3 +9,9 @@
       </div>
    </div>
 </section>
+
+<ng-template #notFound>
+   <div class="alert alert-warning mt-3">
+      Loja não encontrada.
+   </div>
+</ng-template>

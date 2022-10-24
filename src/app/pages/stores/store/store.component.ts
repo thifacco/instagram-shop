@@ -1,18 +1,19 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product.model';
 import { Store } from 'src/app/models/store.model';
 import { ProductService } from 'src/app/services/product.service';
 import { StoreService } from 'src/app/services/store.service';
 import { Search } from 'src/app/models/search.model';
 import { HeaderComponent } from 'src/app/shared/header/header.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.scss']
 })
-export class StoreComponent implements OnInit {
+export class StoreComponent implements OnInit, OnDestroy {
 
   @ViewChild('headerContainer') headerContainer: HeaderComponent;
   @ViewChild('searchInput') searchInput: ElementRef;
@@ -20,6 +21,7 @@ export class StoreComponent implements OnInit {
   public store: Store;
   public products: Product[];
   public querySearch: Search = new Search();
+  private subscription: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -37,7 +39,7 @@ export class StoreComponent implements OnInit {
   }
 
   getStore(): void {
-    this.storeService.get(this.querySearch.storeId).subscribe(
+    this.subscription = this.storeService.get(this.querySearch.storeId).subscribe(
       res => {
         this.store = res;
         this.headerContainer.store = this.store;
@@ -47,7 +49,7 @@ export class StoreComponent implements OnInit {
   }
 
   getAllProducts(): void {
-    this.productService.getByStoreId(this.querySearch.storeId).subscribe(
+    this.subscription = this.productService.getByStoreId(this.querySearch.storeId).subscribe(
       res => this.products = res
     );
   }
@@ -60,9 +62,13 @@ export class StoreComponent implements OnInit {
   }
 
   searchExec(): void {
-    this.productService.searchByStoreId(this.querySearch).subscribe(
+    this.subscription = this.productService.searchByStoreId(this.querySearch).subscribe(
       res => this.products = res
     );
+  }
+  
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { LocalstorageService } from 'src/app/services/localstorage.service';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -7,9 +8,10 @@ import { ProductService } from 'src/app/services/product.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss']
 })
-export class CartComponent implements OnInit {
+export class CartComponent implements OnInit, OnDestroy {
 
   public cartItems: Object[] = [];
+  private subscription: Subscription;
 
   constructor(
     private productService: ProductService,
@@ -23,8 +25,14 @@ export class CartComponent implements OnInit {
   async getCartItems() {
     const items: string[] = this.localstorageService.get('cart');
     await items.map(productId => {
-      this.productService.get(productId).subscribe(res => this.cartItems.push(res))
+      this.subscription = this.productService.get(productId).subscribe(
+        res => this.cartItems.push(res)
+      );
     });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
 }
