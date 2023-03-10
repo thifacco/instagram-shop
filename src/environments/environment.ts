@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  baseApi: 'http://localhost:3007',
-  baseImages: 'https://instagramshop.s3.amazonaws.com'
+  baseApi: 'https://thifacco-effective-sniffle-67jp57rr6rc4w7q-3007.preview.app.github.dev' ?? 'http://localhost:3007',
+  baseImages: 'https://instagramshop.s3.amazonaws.com' ?? ''
 };
 
 /*
