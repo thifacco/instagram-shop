@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { StoreRoutingModule } from './store-routing.module';
+import { StoreComponent } from './views/store/store.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [StoreComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    StoreRoutingModule
   ]
 })
 export class StoreModule { }
