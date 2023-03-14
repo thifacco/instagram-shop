@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product.model';
 import { LocalstorageService } from 'src/app/services/localstorage.service';
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',

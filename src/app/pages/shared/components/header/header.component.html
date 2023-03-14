@@ -1,0 +1,32 @@
+<nav class="navbar navbar-light">
+   <div class="container">
+      <a class="navbar-brand" [routerLink]="['']">
+         <span>Loja</span>
+      </a>
+      <div class="navbar-right">
+         <a [routerLink]="['wishlist']"><i class="bi bi-bookmark"></i></a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+      </div>
+      <div class="collapse navbar-collapse fixed-bottom bg-light shadow" id="navbarText">
+         <div class="container">
+            <div class="p-1 text-center">
+               <i class="bi bi-dash-lg"></i>
+            </div>
+            <span class="navbar-text">
+               Instagram Shop
+            </span>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['home']">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['wishlist']">Lista de desejos</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</nav>
