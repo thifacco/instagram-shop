@@ -11,7 +11,7 @@ export class StoreService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.get(`${environment.baseApi}/stores`);
+    return this.http.get(`assets/data/store-list.json`);
   }
 
   get(id: string): Observable<any> {
