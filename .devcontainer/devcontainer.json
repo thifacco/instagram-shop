@@ -18,6 +18,18 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [3007, 4207],
+	"portsAttributes": {
+		"3007": {
+			"label": "Data | Instagram Shop",
+			"onAutoForward": "notify",
+			"visibility": "public"
+		},
+		"4207": {
+			"label": "App | Instagram Shop",
+			"onAutoForward": "notify",
+			"visibility": "public"
+		}
+	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "npm install"
