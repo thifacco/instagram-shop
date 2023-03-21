@@ -7,14 +7,15 @@ import { CardStoreComponent } from './components/card-store/card-store.component
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
 import { ProfileLinkComponent } from './components/profile-link/profile-link.component';
+import { ImgPathPipe } from './pipes/img-path.pipe';
 
 
 @NgModule({
-  declarations: [CardComponent, HeaderComponent, CardStoreComponent, ProfileComponent, ProfileInfoComponent, ProfileLinkComponent],
+  declarations: [CardComponent, HeaderComponent, CardStoreComponent, ProfileComponent, ProfileInfoComponent, ProfileLinkComponent, ImgPathPipe],
   imports: [
     CommonModule,
     AppRoutingModule
   ],
-  exports: [CardComponent, HeaderComponent, CardStoreComponent, ProfileComponent, ProfileInfoComponent, ProfileLinkComponent]
+  exports: [CardComponent, HeaderComponent, CardStoreComponent, ProfileComponent, ProfileInfoComponent, ProfileLinkComponent, ImgPathPipe]
 })
 export class SharedModule { }
