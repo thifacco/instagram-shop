@@ -2,14 +2,12 @@
     <div class="container">
        <div class="row">
           <div class="col-12 store" *ngFor="let store of stores">
-             <app-card-store [store]="store"></app-card-store>
+            <app-card-store [store]="store"></app-card-store>
           </div>
        </div>
     </div>
  </section>
  
  <ng-template #notFound>
-    <div class="alert alert-warning mt-3">
-       Loja não encontrada.
-    </div>
+    <div class="alert alert-warning mt-3">Não há lojas no feed.</div>
  </ng-template>

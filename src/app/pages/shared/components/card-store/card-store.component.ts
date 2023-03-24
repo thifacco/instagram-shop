@@ -10,9 +10,7 @@ export class CardStoreComponent implements OnInit {
 
   @Input() store: Store;
 
-  constructor() {
-    console.log(this.store);
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 
