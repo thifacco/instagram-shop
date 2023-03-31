@@ -9,7 +9,8 @@ import { IHeader } from 'src/app/interfaces/header.interface';
 export class WishlistComponent implements OnInit {
 
   headerData: IHeader = {
-    title: 'Wishlist'
+    title: 'Wishlist',
+    linkBack: '/'
   }
 
   constructor() { }
