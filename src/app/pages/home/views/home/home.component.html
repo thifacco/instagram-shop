@@ -4,7 +4,9 @@
     <div class="container">
        <div class="row">
           <div class="col-12 store" *ngFor="let store of stores">
-            <app-card-store [store]="store"></app-card-store>
+            <a [routerLink]="['store', store.id]">
+               <app-profile [store]="store"></app-profile>
+            </a>
           </div>
        </div>
     </div>

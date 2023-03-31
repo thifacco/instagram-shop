@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { iHeader } from 'src/app/interfaces/header.interface';
 
 @Component({
   selector: 'app-store',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoreComponent implements OnInit {
 
-  constructor() { }
+  headerData: iHeader;
+  storeId: string;
+
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.storeId = this.route.snapshot.params['storeId'];
+    this.headerData = {
+      title: this.storeId,
+      linkBack: '/'
+    };
   }
 
 }
