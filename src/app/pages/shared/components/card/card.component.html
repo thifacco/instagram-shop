@@ -1,5 +1,5 @@
 <div class="card">
-   <!-- <a [routerLink]="['product', product.id]" target="_top">
+   <a target="_top">
       <div class="card-img">
          <div class="ratio">
             <img [src]="product.image | imgPath" class="img-fluid" [alt]="product.title">
@@ -12,5 +12,5 @@
          <app-btn-save [productId]="product.id" (onWishlist)="wishlist($event)"></app-btn-save>
       </div>
       <div class="card-price">{{ product.price | currency:'BRL':'symbol-narrow':'1.0' }}</div>
-   </div> -->
+   </div>
 </div>

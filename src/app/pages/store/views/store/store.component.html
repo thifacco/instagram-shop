@@ -1,2 +1,11 @@
 <app-header [headerData]="headerData"></app-header>
-<p>store works!</p>
+
+<section id="store" class="store mt-3" *ngIf="store">
+   <div class="container">
+      <div class="row">
+         <div class="col-6" *ngFor="let product of store.products">
+            <app-card [product]="product"></app-card>
+         </div>
+      </div>
+   </div>
+</section>
