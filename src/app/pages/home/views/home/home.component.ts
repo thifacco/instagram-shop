@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from 'src/app/services/store.service';
-import { iHeader } from 'src/app/interfaces/header.interface';
+import { IHeader } from 'src/app/interfaces/header.interface';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,7 @@ import { iHeader } from 'src/app/interfaces/header.interface';
 export class HomeComponent implements OnInit {
 
   stores$ = this.storeService.getAll();
-  headerData: iHeader = { title: 'Loja' }
+  headerData: IHeader = { title: 'Loja' }
 
   constructor(private storeService: StoreService) { }
 

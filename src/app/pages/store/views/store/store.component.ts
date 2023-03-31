@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { iHeader } from 'src/app/interfaces/header.interface';
+import { IHeader } from 'src/app/interfaces/header.interface';
 import { Store } from 'src/app/models/store.model';
 import { StoreService } from 'src/app/services/store.service';
 
@@ -12,7 +12,7 @@ import { StoreService } from 'src/app/services/store.service';
 export class StoreComponent implements OnInit {
 
   store: Store;
-  headerData: iHeader;
+  headerData: IHeader;
 
   constructor(
     public route: ActivatedRoute, 
