@@ -11,10 +11,10 @@ export class StoreService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.get(`${environment.baseApi}/stores`);
+    return this.http.get(environment.baseApi);
   }
 
   get(id: string): Observable<any> {
-    return this.http.get(`${environment.baseApi}/stores/${id}`);
+    return this.http.get(environment.baseApi);
   }
 }

@@ -3,14 +3,6 @@ body {
   background-color: #f5f4f4;
 }
 
-.container {
-  max-width: 575px !important;
-}
-
-.navbar-toggler {
-  padding: 0.25rem 0 0.25rem 0.75rem !important;
-}
-
 .navbar-toggler:focus {
   box-shadow: unset;
 }
@@ -24,4 +16,94 @@ body {
 
 .card {
   background-color: transparent !important;
+}
+
+.navbar {
+  .navbar-brand {
+    font-weight: 600;
+  }
+
+  .navbar-right {
+    a {
+      color: unset;
+    }
+
+    .navbar-toggler {
+      border: unset;
+    }
+  }
+
+  .navbar-collapse {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  img {
+    height: 21px;
+  }
+}
+
+.profile-info {
+  font-size: 14px;
+  font-weight: 600;
+
+  img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 0 .25rem 0 0;
+  }
+}
+
+.store {
+  margin-bottom: 1.5rem;
+
+  .featured {
+    img {
+      width: calc(33% - 2px);
+      height: 100%;
+
+      &.card-img-top {
+        border-top-left-radius: unset;
+        border-top-right-radius: unset;
+        margin-left: 1px;
+        margin-right: 1px;
+
+        &:first-child {
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+        }
+      }
+    }
+  }
+}
+
+.search {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+
+  .input-group-search>input,
+  .input-group-text,
+  .input-group-text>button {
+    border: unset;
+  }
+
+  .input-group-search {
+    input {
+      color: #212529;
+
+      &::placeholder {
+        color: #bdbdbd;
+      }
+    }
+  }
+
+  .input-group-text {
+    color: #bdbdbd;
+  }
 }
