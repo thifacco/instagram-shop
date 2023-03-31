@@ -43,6 +43,31 @@ body {
   }
 }
 
+.search {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+
+  .input-group-search>input,
+  .input-group-text,
+  .input-group-text>button {
+    border: unset;
+  }
+
+  .input-group-search {
+    input {
+      color: #212529;
+
+      &::placeholder {
+        color: #bdbdbd;
+      }
+    }
+  }
+
+  .input-group-text {
+    color: #bdbdbd;
+  }
+}
+
 .profile-info {
   font-size: 14px;
   font-weight: 600;
@@ -80,30 +105,5 @@ body {
         }
       }
     }
-  }
-}
-
-.search {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-
-  .input-group-search>input,
-  .input-group-text,
-  .input-group-text>button {
-    border: unset;
-  }
-
-  .input-group-search {
-    input {
-      color: #212529;
-
-      &::placeholder {
-        color: #bdbdbd;
-      }
-    }
-  }
-
-  .input-group-text {
-    color: #bdbdbd;
   }
 }
