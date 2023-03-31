@@ -1,3 +1,5 @@
+<app-header [headerData]="headerData"></app-header>
+
 <section id="stores" class="stores mt-3" *ngIf="stores$ | async as stores; else notFound">
     <div class="container">
        <div class="row">

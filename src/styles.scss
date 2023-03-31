@@ -17,3 +17,29 @@ body {
 .card {
   background-color: transparent !important;
 }
+
+.navbar {
+  .navbar-brand {
+    font-weight: 600;
+  }
+
+  .navbar-right {
+    a {
+      color: unset;
+    }
+
+    .navbar-toggler {
+      border: unset;
+    }
+  }
+
+  .navbar-collapse {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  img {
+    height: 21px;
+  }
+}
+
