@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductComponent } from './views/product/product.component';
 
-const routes: Routes = [{path: '', component: ProductComponent}];
+const routes: Routes = [{path: ':productId', component: ProductComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

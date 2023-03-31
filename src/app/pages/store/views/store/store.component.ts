@@ -29,8 +29,8 @@ export class StoreComponent implements OnInit {
 
           this.headerData = {
             title: this.store.id,
-            linkBack: '/',
-            thumb: this.store.thumb
+            thumb: this.store.thumb,
+            linkBack: '/'
           };
         }
       });
