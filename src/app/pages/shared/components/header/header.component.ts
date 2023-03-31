@@ -1,11 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { iHeader } from 'src/app/interfaces/header.interface';
 import { environment } from 'src/environments/environment';
-
-interface navMenu {
-  name: string;
-  url: string;
-}
+import { iNavMenu } from 'src/app/interfaces/navMenu.interface';
 
 @Component({
   selector: 'app-header',
@@ -16,12 +12,12 @@ export class HeaderComponent implements OnInit {
 
   @Input() headerData: iHeader;
 
-  absLinkHome: navMenu = {
+  absLinkHome: iNavMenu = {
     name: 'Home',
-    url: `${environment.hostname}/home`
+    url: `${environment.hostname}`
   };
 
-  absLinkWishlist: navMenu = {
+  absLinkWishlist: iNavMenu = {
     name: 'Wishlist',
     url: `${environment.hostname}/wishlist`
   };

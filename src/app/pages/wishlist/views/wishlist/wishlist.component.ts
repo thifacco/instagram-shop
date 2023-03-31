@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { iHeader } from 'src/app/interfaces/header.interface';
 
 @Component({
   selector: 'app-wishlist',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wishlist.component.scss']
 })
 export class WishlistComponent implements OnInit {
+
+  headerData: iHeader = {
+    title: 'Wishlist'
+  }
 
   constructor() { }
 
