@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   baseApi: 'assets/data/store-list.json',
-  baseImages: 'https://instagramshop.s3.amazonaws.com'
+  baseImages: 'https://instagramshop.s3.amazonaws.com',
+  hostname: 'http://localhost:4207'
 };
 
 /*

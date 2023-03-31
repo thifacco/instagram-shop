@@ -1,27 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PAGES_ROUTES } from './pages-routes';
 
-const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('./pages/home/home.module').then((mod) => mod.HomeModule)
-  },
-  {
-    path: 'store',
-    loadChildren: () => import('./pages/store/store.module').then((mod) => mod.StoreModule)
-  },
-  {
-    path: 'product',
-    loadChildren: () => import('./pages/product/product.module').then((mod) => mod.ProductModule)
-  },
-  {
-    path: 'wishlist',
-    loadChildren: () => import('./pages/wishlist/wishlist.module').then((mod) => mod.WishlistModule)
-  }
-];
+const routes: Routes = [...PAGES_ROUTES];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

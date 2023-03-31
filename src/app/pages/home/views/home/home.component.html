@@ -1,15 +1,17 @@
+<app-header [headerData]="headerData"></app-header>
+
 <section id="stores" class="stores mt-3" *ngIf="stores$ | async as stores; else notFound">
     <div class="container">
        <div class="row">
           <div class="col-12 store" *ngFor="let store of stores">
-             <app-card-store [store]="store"></app-card-store>
+            <a [routerLink]="['store', store.id]">
+               <app-profile [store]="store"></app-profile>
+            </a>
           </div>
        </div>
     </div>
  </section>
  
  <ng-template #notFound>
-    <div class="alert alert-warning mt-3">
-       Loja não encontrada.
-    </div>
+    <div class="alert alert-warning mt-3">Não há lojas no feed.</div>
  </ng-template>
