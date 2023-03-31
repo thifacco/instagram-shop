@@ -8,7 +8,6 @@ npm install
 
 ## Iniciar a aplicação
 ```
-npm run api-data
 npm start
 ```
 
