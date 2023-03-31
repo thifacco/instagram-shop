@@ -55,3 +55,55 @@ body {
   }
 }
 
+.store {
+  margin-bottom: 1.5rem;
+
+  .featured {
+    img {
+      width: calc(33% - 2px);
+      height: 100%;
+
+      &.card-img-top {
+        border-top-left-radius: unset;
+        border-top-right-radius: unset;
+        margin-left: 1px;
+        margin-right: 1px;
+
+        &:first-child {
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+        }
+      }
+    }
+  }
+}
+
+.search {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+
+  .input-group-search>input,
+  .input-group-text,
+  .input-group-text>button {
+    border: unset;
+  }
+
+  .input-group-search {
+    input {
+      color: #212529;
+
+      &::placeholder {
+        color: #bdbdbd;
+      }
+    }
+  }
+
+  .input-group-text {
+    color: #bdbdbd;
+  }
+}
