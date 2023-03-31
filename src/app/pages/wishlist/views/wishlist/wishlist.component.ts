@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { iHeader } from 'src/app/interfaces/header.interface';
+import { IHeader } from 'src/app/interfaces/header.interface';
 
 @Component({
   selector: 'app-wishlist',
@@ -8,8 +8,9 @@ import { iHeader } from 'src/app/interfaces/header.interface';
 })
 export class WishlistComponent implements OnInit {
 
-  headerData: iHeader = {
-    title: 'Wishlist'
+  headerData: IHeader = {
+    title: 'Wishlist',
+    linkBack: '/'
   }
 
   constructor() { }

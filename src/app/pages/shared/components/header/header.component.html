@@ -4,11 +4,11 @@
          <img src="assets/icons/icon-arrow.svg" alt="Voltar">
          <span class="profile-info">
             <img [src]="headerData.thumb | imgPath" *ngIf="headerData?.thumb">
-            <span>{{ headerData.title }}</span>
+            <span>{{ headerData?.title }}</span>
          </span>
       </a>
       <span class="navbar-brand" *ngIf="!headerData?.linkBack">
-         <span>{{ headerData.title }}</span>
+         <span>{{ headerData?.title }}</span>
       </span>
       
       <div class="navbar-right">

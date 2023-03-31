@@ -6,13 +6,30 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
 import { ProfileLinkComponent } from './components/profile-link/profile-link.component';
 import { ImgPathPipe } from './pipes/img-path.pipe';
+import { BtnSaveComponent } from './components/btn-save/btn-save.component';
 
 
 @NgModule({
-  declarations: [CardComponent, HeaderComponent, ProfileComponent, ProfileInfoComponent, ProfileLinkComponent, ImgPathPipe],
+  declarations: [
+    CardComponent, 
+    HeaderComponent, 
+    ProfileComponent, 
+    ProfileInfoComponent, 
+    ProfileLinkComponent, 
+    BtnSaveComponent, 
+    ImgPathPipe
+  ],
   imports: [
     CommonModule
   ],
-  exports: [CardComponent, HeaderComponent, ProfileComponent, ProfileInfoComponent, ProfileLinkComponent, ImgPathPipe]
+  exports: [
+    CardComponent, 
+    HeaderComponent, 
+    ProfileComponent, 
+    ProfileInfoComponent, 
+    ProfileLinkComponent, 
+    BtnSaveComponent, 
+    ImgPathPipe
+  ]
 })
 export class SharedModule { }
