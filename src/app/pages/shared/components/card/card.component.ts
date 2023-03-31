@@ -12,8 +12,8 @@ import { environment } from 'src/environments/environment';
 export class CardComponent implements OnInit {
 
   @Input() product: Product;
+  @Input() permalink: string;
   isWislistPage: boolean = false;
-  absLinkProduct: string;
 
   constructor(
     private localstorageService: LocalstorageService,
@@ -22,7 +22,6 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     this.checkIsWishlistPage();
-    this.absLinkProduct = `${environment.hostname}/product/${this.product.id}`;
   }
 
   checkIsWishlistPage(): void {
