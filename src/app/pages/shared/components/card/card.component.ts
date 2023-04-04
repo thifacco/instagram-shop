@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product.model';
 import { LocalstorageService } from 'src/app/services/localstorage.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-card',
@@ -11,7 +12,8 @@ import { LocalstorageService } from 'src/app/services/localstorage.service';
 export class CardComponent implements OnInit {
 
   @Input() product: Product;
-  public isWislistPage: boolean = false;
+  @Input() permalink: string;
+  isWislistPage: boolean = false;
 
   constructor(
     private localstorageService: LocalstorageService,

@@ -9,14 +9,16 @@ import { map, tap } from 'rxjs/operators';
 })
 export class StoreService {
 
+  apiUrl = environment.baseApi;
+
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.get(environment.baseApi);
+    return this.http.get(this.apiUrl);
   }
 
   getById(id: string): Observable<any> {
-    return this.http.get(environment.baseApi).pipe(
+    return this.http.get(this.apiUrl).pipe(
       tap(console.log),
       map((data) => data.filter(store => store.id === id)),
       tap(console.log)

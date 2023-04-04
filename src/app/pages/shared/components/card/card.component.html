@@ -1,5 +1,5 @@
-<div class="card">
-   <a target="_top">
+<div class="card" *ngIf="product && permalink">
+   <a [href]="permalink" target="_top">
       <div class="card-img">
          <div class="ratio">
             <img [src]="product.image | imgPath" class="img-fluid" [alt]="product.title">
