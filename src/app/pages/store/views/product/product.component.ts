@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product.model';
 import { Store } from 'src/app/models/store.model';
 import { StoreService } from 'src/app/services/store.service';
+import { IHeader } from 'src/app/interfaces/header.interface';
 
 @Component({
   selector: 'app-product',
@@ -13,6 +14,7 @@ export class ProductComponent implements OnInit {
 
   store: Store;
   product: Product;
+  headerData: IHeader;
 
   constructor(
     public route: ActivatedRoute,
@@ -28,6 +30,7 @@ export class ProductComponent implements OnInit {
         if (data[0]) {
           this.store = data[0];
           this.product = this.store.products.filter((product) => product.id === getParamProducId)[0];
+          console.log('product', this.product);
         }
       })
     }
