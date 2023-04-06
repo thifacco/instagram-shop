@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   baseApi: 'assets/data/store-list.json',
   baseImages: 'https://instagramshop.s3.amazonaws.com',
-  hostname: 'https://thifacco-fantastic-waddle-qgwx4g9v962x595-4207.preview.app.github.dev' ?? 'http://localhost:4207'
+  hostname: 'http://localhost:4207'
 };
 
 /*
