@@ -32,6 +32,13 @@ export class ProductComponent implements OnInit, OnDestroy {
       this.subscription = this.storeService.getById(getParamStoreId).subscribe((data) => {
         if (data[0]) {
           this.store = data[0];
+
+          this.headerData = {
+            title: this.store.id,
+            thumb: this.store.thumb,
+            linkBack: `/store/${this.store.id}`
+          }
+
           this.product = this.store.products.filter((product) => product.id === getParamProducId)[0];
           console.log('product', this.product);
 
