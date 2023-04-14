@@ -31,8 +31,8 @@
           <h5>Mais desta loja</h5>
           <div class="list">
              <div class="row">
-                <div class="col-6" *ngFor="let relatedProduct of relatedProducts">
-                   <!-- <app-card [product]="relatedProduct"></app-card> -->
+                <div class="col-6" *ngFor="let productRel of productRelated">
+                   <app-card [product]="productRel" [permalink]="'/store/'+store.id+'/product/'+productRel.id"></app-card>
                 </div>
              </div>
           </div>
