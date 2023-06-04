@@ -7,6 +7,7 @@ import { ProfileInfoComponent } from './components/profile-info/profile-info.com
 import { ProfileLinkComponent } from './components/profile-link/profile-link.component';
 import { ImgPathPipe } from './pipes/img-path.pipe';
 import { BtnSaveComponent } from './components/btn-save/btn-save.component';
+import { EmptyComponent } from './components/empty/empty.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { BtnSaveComponent } from './components/btn-save/btn-save.component';
     ProfileInfoComponent, 
     ProfileLinkComponent, 
     BtnSaveComponent, 
-    ImgPathPipe
+    ImgPathPipe, 
+    EmptyComponent
   ],
   imports: [
     CommonModule
@@ -29,7 +31,8 @@ import { BtnSaveComponent } from './components/btn-save/btn-save.component';
     ProfileInfoComponent, 
     ProfileLinkComponent, 
     BtnSaveComponent, 
-    ImgPathPipe
+    ImgPathPipe,
+    EmptyComponent
   ]
 })
 export class SharedModule { }
