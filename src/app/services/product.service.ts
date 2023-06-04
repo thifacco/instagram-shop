@@ -13,20 +13,8 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  getByStoreId(storeId: string): Observable<any> {
-    return this.http.get(`${environment.baseApi}/stores/${storeId}/products?_sort=id`);
-  }
-
   get(id: string): Observable<any> {
     return this.http.get(`${environment.baseApi}/products/${id}`);
-  }
-
-  getRelatedProductsByStoreId(storeId: string): Observable<any> {
-    return this.http.get(`${environment.baseApi}/stores/${storeId}/products?_page=1&_limit=4&_order=asc&id_ne=${storeId}`);
-  }
-
-  searchByStoreId(querySearch: Search): Observable<any> {
-    return this.http.get(`${environment.baseApi}/stores/${querySearch.storeId}/products?title_like=${querySearch.search}`);
   }
 
   addWishlist(id: string) {
@@ -37,15 +25,5 @@ export class ProductService {
   getWishlist() {
     const wishlistStorage: string = localStorage.getItem('wishlist');
     return JSON.parse(wishlistStorage);
-  }
-
-  addCart(id: string) {
-    this.cart.push(id);
-    localStorage.setItem('cart', JSON.stringify(this.cart));
-  }
-
-  getCart() {
-    const cartStorage: string = localStorage.getItem('cart');
-    return JSON.parse(cartStorage);
   }
 }

@@ -1,2 +1,19 @@
 <app-header [headerData]="headerData"></app-header>
-<p>wishlist works!</p>
+
+<section id="wishlist" class="wishlist mt-3">
+   <div class="container">
+      <div class="products" *ngIf="productsWishlist?.length else wishlistEmpty">
+         <div class="row">
+            <div class="col-6" *ngFor="let product of productsWishlist" [id]="product.id">
+               <ng-template ngFor let-product let-i="index" [ngForOf]="store.products">
+                  <img [src]="product.image | imgPath" class="card-img-top" [alt]="product.name" *ngIf="i<3">
+               </ng-template>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<ng-template #wishlistEmpty>
+   <app-empty [emptyData]="emptyData"></app-empty>
+</ng-template>
