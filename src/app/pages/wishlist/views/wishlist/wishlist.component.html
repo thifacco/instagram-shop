@@ -5,7 +5,9 @@
       <div class="products" *ngIf="productsWishlist?.length else wishlistEmpty">
          <div class="row">
             <div class="col-6" *ngFor="let product of productsWishlist" [id]="product.id">
-               <app-card [product]="product"></app-card>
+               <ng-template ngFor let-product let-i="index" [ngForOf]="store.products">
+                  <img [src]="product.image | imgPath" class="card-img-top" [alt]="product.name" *ngIf="i<3">
+               </ng-template>
             </div>
          </div>
       </div>
