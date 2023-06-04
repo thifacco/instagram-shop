@@ -183,3 +183,40 @@ body {
   }
 }
 
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 72px);
+
+  .not-find {
+    display: block;
+    text-align: center;
+    padding: 0 20px;
+    width: 300px;
+
+    .icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border: 1px solid #212529;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h3 {
+      font-size: 16px;
+      width: 154px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}

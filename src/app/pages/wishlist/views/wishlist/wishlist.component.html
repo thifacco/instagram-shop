@@ -1,2 +1,26 @@
 <app-header [headerData]="headerData"></app-header>
-<p>wishlist works!</p>
+
+<section id="wishlist" class="wishlist mt-3">
+   <div class="container">
+      <div class="products" *ngIf="productsWishlist?.length else wishlistEmpty">
+         <div class="row">
+            <div class="col-6" *ngFor="let product of productsWishlist" [id]="product.id">
+               <app-card [product]="product"></app-card>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<ng-template #wishlistEmpty>
+   <div class="empty">
+      <div class="not-find">
+         <div class="icon">
+            <i class="bi bi-bookmark"></i>
+         </div>
+         <h3 class="mt-3">Adicionar à sua lista de desejos</h3>
+         <p class="mt-3">Salve itens que você deseja ver novamente. Só você pode ver os itens na sua lista de
+            desejos.</p>
+      </div>
+   </div>
+</ng-template>
